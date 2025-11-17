@@ -19,8 +19,8 @@ A lightweight, production-ready AI customer support chatbot built with **Python 
 
 1. Clone repository:
 ```bash
-git clone https://github.com/your-username/your-chatbot.git
-cd your-chatbot
+git clone https://github.com/elbywhy/AI-Customer-Assistant-Chatbot.git
+cd AI-Customer-Assistant-Chatbot
 ```
 
 2. Create a virtual environment and activate it:
