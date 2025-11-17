@@ -8,63 +8,58 @@ load_dotenv()
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 if not GEMINI_API_KEY:
-    # Use print statement instead of raising an error for deployment flexibility
+    # Instead of raising, we can log and use an error message if the key is missing
     print("❌ WARNING: GEMINI_API_KEY not found. AI functionality will be disabled.")
 
 # Configure Gemini (only if key exists)
 if GEMINI_API_KEY:
     genai.configure(api_key=GEMINI_API_KEY)
 
-# Load files helper function
+# Load files
 def load_txt(path):
     try:
         with open(path, "r", encoding="utf-8") as f:
             return f.read()
     except FileNotFoundError:
-        print(f"⚠️ WARNING: File not found: {path}. Using empty content.") 
+        print(f"⚠️ WARNING: File not found: {path}. Using empty content.")
         return ""
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    """Renders the main chat interface."""
     return render_template("index.html")
 
 @app.route("/chat", methods=["POST"])
 def chat():
-    """Handles chat requests, constructs prompt, and calls the Gemini API."""
-    
-    # 1. Check for API key availability immediately
     if not GEMINI_API_KEY:
-        return jsonify({"reply": "API Key is missing on the server. AI functionality is disabled."}), 503
+        return jsonify({"reply": "API Key is missing on the server. Please check the .env file."}), 503
 
     try:
         data = request.get_json()
         user_msg = data.get("message", "").strip()
 
         if not user_msg:
-            # Use 'reply' key consistently for frontend error messages
             return jsonify({"reply": "Empty message."}), 400
 
         # Load prompt template & FAQ
         prompt_template = load_txt("prompt_template.txt")
         faq = load_txt("faq.txt")
 
-        # Construct the final prompt for the AI
+        # Construct system prompt (using the standard prompt template)
         system_prompt = (
             prompt_template + "\n\n---\nCompany FAQ:\n" + faq + "\n\n"
         )
         final_prompt = system_prompt + f"User: {user_msg}\nAssistant:"
 
-        # Call Gemini Flash model
+        # Gemini Flash model
         model = genai.GenerativeModel("gemini-2.5-flash")
 
         response = model.generate_content(final_prompt)
 
         reply = response.text if response and response.text else "No response from model."
 
-        # Return the response using the 'reply' key, which the JS expects
+        # The key 'reply' is sent to the frontend
         return jsonify({"reply": reply})
 
     except Exception as e:
