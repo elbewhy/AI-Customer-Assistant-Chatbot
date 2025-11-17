@@ -3,12 +3,21 @@ Company FAQ
 ---
 
 Q: What services does Sunlite provide?
-A: Sunlite specializes in providing affordable and reliable solar power solutions for homes and small businesses, including installation, maintenance, and financing.
+A: Sunlite provides reliable solar power system installation, long-term maintenance, and flexible financing options for Nigerian homes and small businesses.
 
-Q: How can I contact customer support?
-A: You can reach us by email at support@sunlite.com or call us during business hours at +234 800-SUNLITE.
+Q: How long does a typical solar system last?
+A: A typical high-quality solar power system installed by Sunlite has a lifespan of 25 to 30 years with proper, regular maintenance.
 
-Q: Yaya ake yin amfani da solar? (How do I use solar?)
-A: Ana amfani da hasken rana ta hanyar shigar da panels a saman gini don samar da wutar lantarki. Wannan yana rage dogaro da grid kuma yana rage kudin wutar lantarki. (Solar power is used by installing panels on a roof to generate electricity. This reduces reliance on the grid and lowers electricity costs.)
+Q: Can I use solar power during cloudy weather or at night?
+A: Yes. Your system includes a battery storage unit (inverter) that stores the energy captured during the day. This stored energy is what you use when it is cloudy or after sunset.
 
-Q: ... (Add more common questions here)
+Q: Yaya ake hada solar? (How is solar installed?)
+A: Ana fara binciken wurin da za a yi aiki, sannan a sanya panels (fankokin hasken rana) a saman gini, sannan a haɗa su da inverter da baturi don ajiye wutar lantarki. Ana yin duk wannan ta ƙwararrun injiniyoyin Sunlite.
+
+Q: Menene amfanin solar? (What are the benefits of solar?)
+A: Babban amfanin solar shine rage dogaro ga wutar lantarki ta grid, rage kudin wutar lantarki, da kuma samar da wutar lantarki mai tsabta wacce ba ta gurbata muhalli.
+
+Q: Yaya zan tuntubi Sunlite? (How do I contact Sunlite?)
+A: Zaka iya tuntubar mu ta imel a support@sunlite.com ko kuma ka kira layinmu na taimako a +234 800-SUNLITE.
+
+Q: ... (Add more common Q/A pairs here)
