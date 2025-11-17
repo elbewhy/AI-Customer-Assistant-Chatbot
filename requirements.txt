@@ -2,5 +2,4 @@ Flask>=2.0
 gunicorn
 python-dotenv
 requests
-# If using an official Google Generative AI package replace/add below:
-# google-generativeai
+google-generativeai
