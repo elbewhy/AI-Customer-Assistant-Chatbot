@@ -58,3 +58,10 @@ body {
 .chat-container::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+@media (max-width: 480px) {
+    #send-button {
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 14px;
+    }
+}
