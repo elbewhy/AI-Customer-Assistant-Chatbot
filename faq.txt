@@ -1,14 +1,14 @@
-Q: What products do you offer?
-A: We sell solar panels, inverters, batteries, and installation services.
+---
+Company FAQ
+---
 
-Q: What are your business hours?
-A: We are open from 9AM to 5PM, Monday to Saturday.
+Q: What services does Sunlite provide?
+A: Sunlite specializes in providing affordable and reliable solar power solutions for homes and small businesses, including installation, maintenance, and financing.
 
-Q: How can I contact support?
-A: Email support@sunlite.com or call +2348012345678.
+Q: How can I contact customer support?
+A: You can reach us by email at support@sunlite.com or call us during business hours at +234 800-SUNLITE.
 
-Q: Do you offer warranty?
-A: Yes, all our products come with a 5-year warranty.
+Q: Yaya ake yin amfani da solar? (How do I use solar?)
+A: Ana amfani da hasken rana ta hanyar shigar da panels a saman gini don samar da wutar lantarki. Wannan yana rage dogaro da grid kuma yana rage kudin wutar lantarki. (Solar power is used by installing panels on a roof to generate electricity. This reduces reliance on the grid and lowers electricity costs.)
 
-Q: Do you make refunds?
-A: Yes we do refunds when you have genune reason to be refunded.
+Q: ... (Add more common questions here)
