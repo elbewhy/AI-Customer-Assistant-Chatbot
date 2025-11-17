@@ -2,11 +2,15 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: #fae5fe;
 }
+
+/* Chat container scroll behavior */
 .chat-container {
-    max-height: 70vh; /* Limit chat history height */
-    overflow-y: auto; /* Enable scrolling */
-    scroll-behavior: smooth; /* Smooth scrolling for new messages */
+    max-height: 70vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }
+
+/* Chat bubbles */
 .message-bubble {
     max-width: 80%;
     padding: 10px 15px;
@@ -14,25 +18,38 @@ body {
     margin-bottom: 10px;
     line-height: 1.5;
 }
+
 .user-message {
-    background-color: #007bff; /* Blue for user */
+    background-color: #007bff;
     color: white;
     align-self: flex-end;
-    border-bottom-right-radius: 5px; /* Slightly less rounded */
+    border-bottom-right-radius: 5px;
 }
+
 .ai-message {
-    background-color: #284b28; /* Light gray for AI */
+    background-color: #284b28;
     color: #f3f1f1;
     align-self: flex-start;
-    border-bottom-left-radius: 5px; /* Slightly less rounded */
+    border-bottom-left-radius: 5px;
 }
-/* Custom scrollbar for Webkit browsers */
+
+/* Custom scrollbar */
 .chat-container::-webkit-scrollbar {
     width: 8px;
 }
+
 .chat-container::-webkit-scrollbar-track {
     background: #e8ec9c;
     border-radius: 20px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 .chat-container::-webkit-scrollbar-thumb {
     background: #888;
