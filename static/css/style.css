@@ -1,1 +1,43 @@
-/* Add custom styles here if needed */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fae5fe;
+}
+.chat-container {
+    max-height: 70vh; /* Limit chat history height */
+    overflow-y: auto; /* Enable scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling for new messages */
+}
+.message-bubble {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+.user-message {
+    background-color: #007bff; /* Blue for user */
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px; /* Slightly less rounded */
+}
+.ai-message {
+    background-color: #284b28; /* Light gray for AI */
+    color: #f3f1f1;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px; /* Slightly less rounded */
+}
+/* Custom scrollbar for Webkit browsers */
+.chat-container::-webkit-scrollbar {
+    width: 8px;
+}
+.chat-container::-webkit-scrollbar-track {
+    background: #e8ec9c;
+    border-radius: 20px;
+}
+.chat-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+.chat-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
