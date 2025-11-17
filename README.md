@@ -1,132 +1,97 @@
-# AI Customer Support Chatbot
+# Sunlite Energy AI Customer Assistant Chatbot
 
-A lightweight, production-ready AI customer support chatbot built with **Python (Flask)**, **HTML**, **TailwindCSS**, and **JavaScript**, using **Google Gemini** as the generative model. The project reads company information from `faq.txt`, uses a structured prompt from `prompt_template.txt`, and issues requests to Gemini using an API key stored in a `.env` file.
+![Chatbot Demo](https://img.shields.io/badge/Status-Live-green)
 
----
-
-## Features
-- AI-powered responses using Gemini (via API key)
-- Contextual knowledge injection from `faq.txt`
-- Configurable personality and instructions via `prompt_template.txt`
-- Modern frontend with TailwindCSS (CDN) and vanilla JS
-- Simple Flask backend with a `/chat` endpoint
-- Secure handling of API keys using `.env`
-- Dockerfile and setup scripts for easy deployment
+A responsive, AI-powered customer support chatbot for Sunlite Energy, built with Python, Flask, Tailwind CSS, and JavaScript. This project demonstrates full-stack development, API integration, and real-time AI interactions for customer service.
 
 ---
 
-## Quickstart (local)
+## 🌟 Live Demo
+Try the chatbot live here: [AI Customer Assistant](https://ai-customer-assistant-chatbot.onrender.com)
 
-1. Clone repository:
-```bash
-git clone https://github.com/elbywhy/AI-Customer-Assistant-Chatbot.git
-cd AI-Customer-Assistant-Chatbot
-```
+---
 
-2. Create a virtual environment and activate it:
-```bash
-python -m venv venv
-# macOS/Linux
-source venv/bin/activate
-# Windows (Powershell)
-venv\Scripts\Activate.ps1
-```
+## 🛠️ Features
+- AI-powered conversation using Google Gemini API.
+- Dynamic FAQ integration via `faq.txt`.
+- Responsive, WhatsApp-style chat UI with Tailwind CSS.
+- Mobile-friendly input field and fully visible send button.
+- Smooth auto-scroll to the latest messages.
+- Easy configuration via `.env` file for API keys.
+- Full-stack Flask application with HTML, CSS, and JS.
+
+---
+
+## 📂 Project Structure
+
+AI-Customer-Assistant-Chatbot/
+│
+├─ app.py # Flask backend
+├─ requirements.txt # Python dependencies
+├─ .env # API key and configuration
+├─ prompt_template.txt # AI prompt template
+├─ faq.txt # Company FAQ data
+├─ templates/
+│ └─ index.html # Main frontend HTML
+└─ static/
+├─ css/
+│ └─ style.css # Tailwind + custom CSS
+└─ js/
+└─ script.js # JS for chat functionality
+
+
+---
+
+## ⚡ Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/Sunlite-Energy-AI-Assistant-Chatbot.git
+   cd Sunlite-Energy-AI-Assistant-Chatbot
+
+2. Create and Activate Virtual environment:
+
+   python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
 
 3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+   pip install -r requirements.txt
 
-4. Create `.env` in project root:
-```
-GEMINI_API_KEY=your_gemini_api_key_here
-FLASK_ENV=development
-FLASK_APP=app.py
-```
+4. Create .env file in the root:
 
-5. Run the app:
-```bash
-python app.py
-```
+   GEMINI_API_KEY=your_api_key_here
+GEMINI_ENDPOINT=https://api.example.com/v1/generate
 
-6. Open your browser at `http://127.0.0.1:5000`
+5. Run the app locally:
+   python app.py
 
----
 
-## Project Structure
+🎨 Frontend
+Built with Tailwind CSS for a modern, responsive design.
 
-```
-chatbot/
-├── app.py
-├── requirements.txt
-├── Dockerfile
-├── setup.sh
-├── .env.example
-├── .gitignore
-├── faq.txt
-├── prompt_template.txt
-├── templates/
-│   └── index.html
-└── static/
-    ├── css/
-    │   └── style.css
-    └── js/
-        └── script.js
-```
+Input area + send button fully responsive on mobile.
 
----
+Chat bubbles for user & AI messages with smooth scrolling.
 
-## How it works (high-level)
-1. Frontend sends user message to `/chat` endpoint via fetch.
-2. Backend loads `prompt_template.txt` and `faq.txt`, constructs a system prompt and user prompt.
-3. Backend calls Gemini API with the composed prompt and returns the model reply to the frontend.
-4. Frontend renders the assistant response.
+🤖 Backend
+Flask backend handles /chat POST requests.
 
----
+Reads prompts from prompt_template.txt and FAQs from faq.txt.
+Sends requests to Gemini API using requests library.
 
-## Files of interest
+📈 Future Improvements
 
-- `faq.txt` — Company information and FAQs fed into prompts for domain knowledge.
-- `prompt_template.txt` — System instructions and templates used to control model behavior.
-- `app.py` — Flask app with `/` and `/chat` endpoints and Gemini API interaction.
-- `templates/index.html` — Frontend UI using TailwindCSS and vanilla JS.
-- `static/js/script.js` — Handles sending messages and updating the UI.
+Add authentication for admin and customer users.
 
----
+Support multi-language responses.
 
-## Deployment
+Add voice input/output for accessibility.
 
-### Docker (production)
-Build:
-```bash
-docker build -t chatbot:latest .
-```
-Run:
-```bash
-docker run -p 5000:5000 --env-file .env chatbot:latest
-```
+Deploy a custom AI model for domain-specific queries.
 
-### Gunicorn (on VPS)
-```bash
-pip install -r requirements.txt
-gunicorn --bind 0.0.0.0:8000 app:app
-```
+📧 Contact
 
----
+Developed by Abubakar Ruwa
+Email: abubakarruwa5@gmail.com
 
-## Security & Best Practices
-- Never commit `.env` containing `GEMINI_API_KEY`.
-- Use HTTPS in production.
-- Add rate limiting and authentication on the `/chat` endpoint if exposing publicly.
-- Log minimal user data and respect privacy.
-
----
-
-## Contributing
-See `CONTRIBUTING.md` for guidelines.
-
----
-
-## License
-This project is released under the MIT License. See `LICENSE`.
+Phone: +2347062255636
 
