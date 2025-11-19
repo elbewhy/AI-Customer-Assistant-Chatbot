@@ -57,7 +57,8 @@ async function sendMessage() {
 
         const data = await response.json();
         
-        // --- THE FIX: Reading data.reply instead of data.response ---
+        // --- THE FIX ---
+        // Change data.response to data.reply to match the Flask backend
         addMessage('ai', data.reply); 
 
     } catch (error) {
