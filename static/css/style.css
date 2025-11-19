@@ -8,7 +8,7 @@ body {
 .mobile-wrapper {
     width: 390px;         /* iPhone 12 Pro width */
     max-width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
