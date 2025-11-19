@@ -43,16 +43,16 @@ body {
 }
 
 @media (max-width: 480px) {
-    .chat-form {
+    .user-input {
         padding: 10px;
     }
 
-    .chat-input {
+    .user-input {
         font-size: 14px;
         padding: 12px;
     }
 
-    .send-btn {
+    .send-button {
         padding: 12px 16px;
         font-size: 14px;
     }
