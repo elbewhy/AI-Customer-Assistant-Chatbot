@@ -2,6 +2,7 @@
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
+    min-height: 100vh;
 }
 
 /* MOBILE WRAPPER (forces mobile size even on desktop) */
