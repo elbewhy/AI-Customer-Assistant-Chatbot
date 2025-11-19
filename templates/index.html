@@ -1,48 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Chatbot</title>
-
-    <!-- Tailwind -->
-    <link href="/static/css/input.css" rel="stylesheet" />
-    <link href="/static/css/style.css" rel="stylesheet" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Assistant Agent</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- EXTERNAL CSS LINK -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" >
 </head>
-<body class="bg-gray-100">
+<body class="flex items-center justify-center min-h-screen p-5 bg-gradient-to-r from-blue-200 to-blue-10">
+    <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-lg flex flex-col h-[80vh]">
+        <h1 class="text-3xl font-bold text-center text-blue-800 mb-6">Sunlite Customer Assistant</h1>
 
-    <div class="chat-container">
-
-        <!-- Header -->
-        <div class="chat-header">
-            <h2>AI Chat Assistant</h2>
+        <!-- Chat History Display -->
+        <div id="chat-history" class="chat-container flex-grow p-4 bg-gray-50 rounded-lg mb-4 flex flex-col space-y-3">
+            <!-- Messages will be appended here -->
+            <div class="message-bubble ai-message self-start shadow-sm">
+                Hello! How can I assist you today?
+            </div>
         </div>
 
-        <!-- Chat Messages -->
-        <div id="chat-box" class="chat-box"></div>
-
-        <!-- Typing Indicator -->
-        <div id="typing-indicator" class="typing hidden">AI is typing...</div>
-
-        <!-- Input Area -->
-        <form id="chat-form" class="chat-form">
+        <!-- Message Input Area -->
+        <div class="flex space-x-3">
             <input
                 type="text"
                 id="user-input"
-                class="chat-input"
                 placeholder="Type your message..."
-                autocomplete="off"
+                class="flex-grow p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+                onkeypress="handleKeyPress(event)"
             />
-
-            <button id="send-btn" type="submit" class="send-btn">
+            <button
+                id="send-button"
+                onclick="sendMessage()"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-200 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+            >
                 Send
             </button>
-        </form>
-
+        </div>
     </div>
-
-    <script src="/static/js/script.js"></script>
-
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
