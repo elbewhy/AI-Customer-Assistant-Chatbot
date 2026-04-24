@@ -45,7 +45,7 @@ AI-Customer-Assistant-Chatbot/
 ## ⚡ Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Sunlite-Energy-AI-Assistant-Chatbot.git
+   git clone https://github.com/elbewhy/Sunlite-Energy-AI-Assistant-Chatbot.git
    cd Sunlite-Energy-AI-Assistant-Chatbot
 
 2. Create and Activate Virtual environment:
